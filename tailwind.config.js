@@ -13,6 +13,7 @@ module.exports = {
         backgroundColor: "var(--background-color)",
         orangeColor:"var(--orange-color)",
         whiteColor:"var(--white-color)",
+        offwhiteColor:"var(--offwhite-color)",
       },
     },
   },
