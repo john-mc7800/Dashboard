@@ -14,6 +14,11 @@ module.exports = {
         orangeColor:"var(--orange-color)",
         whiteColor:"var(--white-color)",
         offwhiteColor:"var(--offwhite-color)",
+        textBlue:"var(--text-black)",
+        textGray:"var(--text-gray)",
+      },
+      fontFamily: {
+        poppins: ['var(--font-poppins)'], // Add Poppins font here
       },
     },
   },
