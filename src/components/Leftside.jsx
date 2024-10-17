@@ -16,39 +16,41 @@ export default function Leftside() {
     { label: "Billing", icon: PiMoneyLight },
     { label: "Apps", icon: CgDisplayGrid },
   ];
+
   return (
-    <div className="py-8 mx-4 h-full relative">
-      <div className="flex flex-row justify-center items-center gap-2 mt-6">
+    <div className="p-4 h-full w-full lg:w-auto relative">
+      {/* User Info */}
+      <div className="flex flex-col lg:flex-row items-center lg:justify-center gap-4 lg:gap-2">
         <Image
           src="/images/User-image.png"
-          className="w-14 h-14 "
+          className="w-16 h-16 lg:w-14 lg:h-14 rounded-full"
           width={500}
           height={500}
           alt="Picture of the author"
         />
-        <div className="">
-          <h1 className="text-base text-textBlue font-black text-">
-            Ildiko Gaspar
-          </h1>
+        <div className="text-center lg:text-left">
+          <h1 className="text-base text-textBlue font-black">Ildiko Gaspar</h1>
           <p className="text-sm text-textGray">@igaspar</p>
         </div>
       </div>
 
-      <div className="flex flex-col my-20 mx-4">
+      {/* Menu Items */}
+      <div className="flex flex-col my-10 lg:my-14 mx-2 lg:mx-4">
         {menuItems.map((item, index) => {
           const Icon = item.icon;
           return (
-            <div key={index} className="flex flex-row items-center gap-3 mb-4">
-              <Icon className="text-2xl text-textGray" />{" "}
+            <div key={index} className="flex items-center gap-3 mb-6 lg:mb-4">
+              <Icon className="text-2xl text-textGray" />
               <p className="text-sm text-textGray">{item.label}</p>
             </div>
           );
         })}
       </div>
 
-      <div className="flex flex-row  items-center absolute mx-4 bottom-10">
+      {/* Logout */}
+      <div className="flex items-center absolute bottom-10 w-full lg:mx-4">
         <IoIosLogOut className="text-2xl text-textGray" />
-        <p className="text-sm text-textGray">Logout</p>
+        <p className="text-sm text-textGray ml-2">Logout</p>
       </div>
     </div>
   );

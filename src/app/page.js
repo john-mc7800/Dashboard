@@ -1,18 +1,29 @@
 import Billing from "@/components/Billing";
 import Leftside from "@/components/Leftside";
+import Plan from "@/components/Plan";
 import React from "react";
-
 
 export default function Home() {
   return (
-    <div className="flex items-center">
-      <div className="h-[779px] w-[15vw] bg-orangeColor rounded-3xl z-1 relative left-10"></div>
-      <div className="h-[679px] w-[85vw] bg-whiteColor rounded-3xl z-2 absolute top-18 left-32 flex flex-row ">
-        <div className="h-[679px] w-[17vw] bg-offwhiteColor rounded-l-3xl">
-          <Leftside/>
+    <div className="flex flex-col lg:flex-row items-center">
+      {/* Left Side Bar */}
+      <div className="hidden lg:block h-[679px] lg:w-[15vw] w-full bg-orangeColor rounded-3xl z-1 relative lg:left-5"></div>
+      
+      {/* Main Grid Layout */}
+      <div className="grid lg:grid-cols-[16vw_1fr_25vw] grid-cols-1 gap-4 lg:h-[610px] w-full lg:w-[89vw] bg-whiteColor rounded-3xl z-2 lg:absolute top-10 lg:left-24">
+        {/* Leftside Component */}
+        <div className="my-10 hidden lg:block">
+          <Leftside />
         </div>
-        <div className="my-14 mx-12">
-          <Billing/>
+
+        {/* Billing Component */}
+        <div className="my-8 lg:ml-12 ml-4">
+          <Billing />
+        </div>
+
+        {/* Plan Component */}
+        <div className="my-10 lg:mr-16 mr-4">
+          <Plan />
         </div>
       </div>
     </div>
