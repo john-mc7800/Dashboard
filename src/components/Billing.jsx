@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import { SiVisa } from "react-icons/si";
 
 export default function Billing() {
   const data = [
@@ -87,13 +87,9 @@ export default function Billing() {
         </div>
         <div className="flex flex-col md:flex-row justify-between lg:items-center my-4 max-w-full lg:max-w-[500px] ">
           <div className="flex flex-row items-center gap-2">
-            <Image
-              src="/images/visa.png"
-              className="w-[67px] h-[38px]"
-              width={67}
-              height={38}
-              alt="Visa card image"
-            />
+            <div className="border  rounded-lg px-3 ">
+              <SiVisa className="text-5xl text-[#121963] " />
+            </div>
             <p className="text-textBlue text-sm font-medium">
               Visa ending in 2255
             </p>

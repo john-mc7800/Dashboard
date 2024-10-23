@@ -22,7 +22,7 @@ export default function Leftside() {
       {/* User Info */}
       <div className="flex flex-col lg:flex-row items-center lg:justify-center gap-4 lg:gap-2">
         <Image
-          src="/images/User-image.png"
+          src="https://img.freepik.com/free-photo/horizontal-portrait-smiling-happy-young-pleasant-looking-female-wears-denim-shirt-stylish-glasses-with-straight-blonde-hair-expresses-positiveness-poses_176420-13176.jpg?t=st=1729662008~exp=1729665608~hmac=dd0b83c49c26bb71f7d00f0c92cd79811ad2294712b0332637a15571a4ce2376&w=740"
           className="w-16 h-16 lg:w-14 lg:h-14 rounded-full"
           width={500}
           height={500}
