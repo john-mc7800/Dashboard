@@ -31,7 +31,7 @@ export default function Billing() {
   ];
 
   return (
-    <div className="p-4">
+    <div className="p-4 ">
       {/* Billing Heading */}
       <h1 className="text-2xl lg:text-[32px] font-bold text-textBlue">
         Billing
@@ -47,7 +47,7 @@ export default function Billing() {
 
       {/* Order History List */}
       <div className="container">
-        <div className="grid grid-cols-3 text-sm my-2">
+        <div className="grid grid-cols-3 gap-4 text-sm my-2">
           <p className="text-textGray pl-2">Date</p>
           <p className="text-textGray">Type</p>
           <p className="text-textGray">Receipt</p>
@@ -55,15 +55,17 @@ export default function Billing() {
         {data.map((item, index) => (
           <div
             key={index}
-            className={`${
+            className={`grid grid-cols-3 gap-4 text-sm lg:max-w-[500px]  my-2 py-2 ${
               item.date === "Aug. 21, 2021" ? "shadow-lg py-2 rounded-lg" : ""
-            } grid grid-cols-3 text-sm w-[220px] lg:max-w-[500px] min-w-[100px] my-2`}
+            }`}
           >
-            <p className="text-base text-textBlue font-medium pl-2">
+            <p className="text-xs md:text-base lg:text-base text-textBlue font-medium pl-2">
               {item.date}
             </p>
-            <p className="text-base text-textBlue font-medium">{item.type}</p>
-            <button className="text-sm sm:text-base text-textBlue font-medium border border-textGray rounded-md mx-2 sm:mx-4 lg:mx-6 px-2 w-20 py-1  sm:w-auto">
+            <p className="text-xs md:text-base lg:text-base text-textBlue font-medium">
+              {item.type}
+            </p>
+            <button className="text-xs md:text-base lg:text-sm sm:text-base text-textBlue font-medium border border-textGray rounded-md px-4 py-1 w-auto">
               {item.action}
             </button>
           </div>
@@ -76,14 +78,14 @@ export default function Billing() {
       {/* Payment Method Section */}
       <div className="ml-2 my-6">
         <div className="">
-          <h1 className="text-base lg:text-lg text-textBlue font-bold">
+          <h1 className="text-base md:text-lg lg:text-lg text-textBlue font-bold">
             Payment Method
           </h1>
-          <p className="text-textGray text-sm font-medium">
+          <p className="text-textGray text-xs md:text-base lg:text-sm font-medium">
             Manage billing information and view receipts
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row justify-between items-center my-4 max-w-full lg:max-w-[500px] min-w-[300px]">
+        <div className="flex flex-col md:flex-row justify-between lg:items-center my-4 max-w-full lg:max-w-[500px] ">
           <div className="flex flex-row items-center gap-2">
             <Image
               src="/images/visa.png"
@@ -96,7 +98,7 @@ export default function Billing() {
               Visa ending in 2255
             </p>
           </div>
-          <button className="text-base text-textBlue font-medium border border-textGray rounded-md px-2 py-1 mt-4 sm:mt-0 sm:mr-8">
+          <button className="text-sm md:text-base w-[100px] text-textBlue font-medium border border-textGray rounded-md px-2 py-1 mt-4  mr-8 lg:mr-0">
             Remove
           </button>
         </div>
